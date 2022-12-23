@@ -13,14 +13,14 @@ def view_projects(user_mail):
                 print("no project for you ")
                 login_menu()
             else:
-                print("-------------- User Projects ----------------")
+                
                 counter = 1
                 for dict in list:
-                    print("Project: %d" % counter)
-                    print("Project Title: %s" % dict["Title"])
-                    print("Project Description: %s" % dict["Details"])
-                    print("Total Target: %s" % dict["Total_Target"])
+                    print("Title: %s" % dict["Title"])
+                    print("Description: %s" % dict["Details"])
+                    print("Target: %s" % dict["Total_Target"])
                     print("Start Date: %s" % dict["Start_Time"])
                     print("End Date: %s" % dict["End_Time"])
-                    print("....................................................")
                     counter +=1
+               
+                    

@@ -4,8 +4,6 @@ from delete import delete_project
 from edit_project import edit_project
 from search import search_project
 from view_projects import view_projects
-
-
 def get_user(email, password):
     list_users = []
     json_file = open('users.json')
@@ -18,8 +16,6 @@ def get_user(email, password):
             return email
         else:
             pass
-
-
 def login():
     email = input("Email: ")
     password = input("Password: ")
@@ -28,12 +24,11 @@ def login():
         print("Login Succeeded!")
         return email
     else:
-        print("Login Failed!")
+        print("Login Failed........")
         return 0
 
-
-def login_menu():
-    print("--------------- Login --------------------")
+def menu():
+    print("............ Login .........")
     user_mail = login()
     if user_mail:
         while True:
@@ -47,13 +42,12 @@ def login_menu():
                 """))
 
             if choice == 1:
-                
                 create_project(user_mail)
             elif choice == 2:
-               
+             
                 view_projects(user_mail)
             elif choice == 3:
-             
+               
                 edit_project(user_mail)
             elif choice == 4:
                

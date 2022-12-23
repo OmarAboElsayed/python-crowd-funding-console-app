@@ -1,10 +1,8 @@
 import json
 
 from create_project import validate_datetime
-
-
 def edit_project(user_mail):
-    print("--------------- Edit Project --------------------")
+    print("..............Edit Project ..........")
     project_title = input("Project Title: ")
 
     list = []
@@ -13,7 +11,7 @@ def edit_project(user_mail):
         Dict = json.loads(line)
         list.append(Dict)
 
-        # search for poject name
+        # search for project NameTitle
     update_items = []
     for dict in list:
         if dict['Title'] == project_title and dict['User'] == user_mail:
@@ -41,6 +39,6 @@ def edit_project(user_mail):
             print("this project name  Not exist please try again")
             edit_project(user_mail)
 
-    print("\nupdate project successfully")
+    print("update project successfully")
 
 
