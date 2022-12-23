@@ -47,16 +47,16 @@ def login_menu():
                 """))
 
             if choice == 1:
-                print("create project")
+                
                 create_project(user_mail)
             elif choice == 2:
-                # print("view projects")
+               
                 view_projects(user_mail)
             elif choice == 3:
-                print("edit project")
+             
                 edit_project(user_mail)
             elif choice == 4:
-                print("delete project")
+               
                 delete_project(user_mail)
             elif choice == 5:
                 search_project(user_mail)
